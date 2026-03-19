@@ -1,0 +1,89 @@
+/* ======================================
+   LAPTOP / DESKTOP — (min-width: 1024px)
+   ====================================== */
+
+@media (min-width: 1024px) {
+  /* ---- Hero Image Section ---- */
+  section.relative.h-\[55vh\] {
+    height: 55vh;
+    min-height: 400px;
+  }
+
+  /* ---- Typography scales up ---- */
+  h1 {
+    font-size: 4.5rem; /* text-7xl */
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: 2.25rem; /* text-4xl */
+    line-height: 1.2;
+  }
+
+  /* ---- Section spacing: generous ---- */
+  section > div.mx-auto {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  /* ---- Card hover enhancements (pointer devices only) ---- */
+  @media (hover: hover) and (pointer: fine) {
+    .rounded-xl.border.border-neutral-200.bg-white.p-6 {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .rounded-xl.border.border-neutral-200.bg-white.p-6:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Industry cards hover lift */
+    .rounded-xl.border.border-neutral-200.px-6.py-8 {
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    .rounded-xl.border.border-neutral-200.px-6.py-8:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Service page cards hover lift */
+    .overflow-hidden.rounded-xl.border.border-neutral-200 {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .overflow-hidden.rounded-xl.border.border-neutral-200:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Button hover transitions */
+    a.rounded-full {
+      transition: all 0.2s ease;
+    }
+
+    /* Project images hover zoom */
+    .group .aspect-\[4\/3\] > div {
+      transition: transform 0.3s ease;
+    }
+
+    .group:hover .aspect-\[4\/3\] > div {
+      transform: scale(1.03);
+    }
+  }
+
+  /* ---- Trust items: all 4 columns ---- */
+  .grid.gap-10.sm\:grid-cols-2.lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* ---- Industries: 3 columns ---- */
+  .grid.gap-6.sm\:grid-cols-2.md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* ---- Footer: full 4-column layout ---- */
+  footer .grid.gap-12.sm\:grid-cols-2.lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

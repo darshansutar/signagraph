@@ -1,0 +1,94 @@
+/* ======================================
+   TABLET — (768px – 1023px)
+   ====================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* ---- Hero Image Section ---- */
+  section.relative.h-\[55vh\] {
+    height: 45vh;
+    min-height: 280px;
+  }
+
+  /* ---- Typography ---- */
+  h1 {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-size: 1.375rem;
+    line-height: 1.3;
+  }
+
+  /* ---- Section spacing ---- */
+  section > div.mx-auto {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* ---- About section overlap — remove on tablet ---- */
+  section.-mt-20 {
+    margin-top: 0;
+  }
+
+  /* ---- Rounded card sections ---- */
+  section.mx-6 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  section.mx-6 > div.mx-auto {
+    padding: 3rem 1.5rem;
+  }
+
+  /* ---- Spacing overrides ---- */
+  .mt-24 {
+    margin-top: 3rem;
+  }
+
+  .gap-16 {
+    gap: 2.5rem;
+  }
+
+  /* ---- Services outer grid: stack on tablet ---- */
+  .grid.gap-16.lg\:grid-cols-\[1fr_3fr\] {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* ---- Services inner grid: 2 columns ---- */
+  .grid.gap-6.sm\:grid-cols-2.lg\:grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ---- Trust items grid: 2 columns ---- */
+  .grid.gap-10.sm\:grid-cols-2.lg\:grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* ---- Industries grid: 2 columns ---- */
+  .grid.gap-6.sm\:grid-cols-2.md\:grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ---- Footer grid: 2 columns ---- */
+  footer .grid.gap-12.sm\:grid-cols-2.lg\:grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  /* ---- Subpage headers ---- */
+
+  .bg-\[\#265eaa\] h1 {
+    font-size: 1.75rem;
+  }
+
+  /* ---- About / Contact page grids ---- */
+  .grid.gap-16.lg\:grid-cols-2 {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
