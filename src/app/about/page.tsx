@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -37,11 +38,14 @@ export default function About() {
               </p>
             </div>
 
-            {/* Right — Image placeholder */}
-            <div className="aspect-[4/3] overflow-hidden rounded-xl bg-neutral-300">
-              <div className="flex h-full w-full items-center justify-center text-neutral-500">
-                Team / workspace image
-              </div>
+            {/* Right — Image */}
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-neutral-300">
+              <Image
+                src="/images/workspace-mockup.jpg"
+                alt="Signagraph workspace"
+                fill
+                className="object-cover object-center"
+              />
             </div>
           </div>
         </div>

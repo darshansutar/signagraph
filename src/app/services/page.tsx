@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 
 const services = [
@@ -5,31 +6,37 @@ const services = [
     title: "Brand Execution",
     description:
       "We help brands translate creative concepts into real-world installations. From retail environments to corporate spaces and promotional activations, we ensure seamless execution of branding projects.",
+    image: "/images/service-excution mockup.jpg",
   },
   {
     title: "Retail & Spatial Branding",
     description:
       "Complete branding solutions for retail stores, showrooms, and commercial environments including wall graphics, signage systems, display installations, and visual merchandising elements.",
+    image: "/images/service-retail.jpg",
   },
   {
     title: "Corporate Branding",
     description:
       "Office branding and environmental graphics that create strong brand presence within corporate spaces, including reception branding, wayfinding systems, and workspace graphics.",
+    image: "/images/service-corporate.jpg",
   },
   {
     title: "Exhibition & Event Branding",
     description:
       "Design and execution of exhibition stands, stage backdrops, display panels, and event branding installations that help brands stand out in high-visibility environments.",
+    image: "/images/service-exhibition.jpg",
   },
   {
     title: "Outdoor Branding & Signage",
     description:
       "Large-scale brand visibility solutions including building signage, illuminated signs, hoardings, and outdoor installations designed for durability and maximum impact.",
+    image: "/images/service-outdoor.jpg",
   },
   {
     title: "Production & Fabrication",
     description:
       "Advanced production capabilities including large format printing, signage fabrication, and custom branding elements executed with high-quality materials and precision manufacturing.",
+    image: "/images/service-production.jpg",
   },
 ];
 
@@ -52,10 +59,19 @@ export default function Services() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <div key={service.title} className="overflow-hidden rounded-xl border border-neutral-200">
-              <div className="aspect-[3/2] bg-neutral-200">
-                <div className="flex h-full w-full items-center justify-center text-sm text-neutral-400">
-                  {service.title} image
-                </div>
+              <div className="relative aspect-[3/2] bg-neutral-200">
+                {service.image ? (
+                  <Image
+                    src={service.image}
+                    alt={`${service.title} image`}
+                    fill
+                    className="object-cover object-center"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center text-sm text-neutral-400">
+                    {service.title} image
+                  </div>
+                )}
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-semibold">{service.title}</h3>

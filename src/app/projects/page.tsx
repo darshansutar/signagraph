@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 
 export default function Projects() {
@@ -22,18 +23,27 @@ export default function Projects() {
         </p>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { title: "Flagship Retail Store", category: "Retail Branding" },
-            { title: "Corporate HQ Rebrand", category: "Corporate Environment" },
-            { title: "Trade Show Pavilion", category: "Exhibition & Events" },
-            { title: "Building Facade Signage", category: "Outdoor Signage" },
-            { title: "Showroom Experience", category: "Spatial Branding" },
-            { title: "Hotel Lobby Branding", category: "Hospitality" },
+            { title: "Flagship Retail Store", category: "Retail Branding", image: "/images/project-retail-store.jpg" },
+            { title: "Corporate HQ Rebrand", category: "Corporate Environment", image: "/images/project-hq-branding.jpg" },
+            { title: "Trade Show Pavilion", category: "Exhibition & Events", image: "/images/project-pavillion-2.jpg" },
+            { title: "Building Facade Signage", category: "Outdoor Signage", image: "/images/project-facade.jpg" },
+            { title: "Showroom Experience", category: "Spatial Branding", image: "/images/project-showroom.jpg" },
+            { title: "Hotel Lobby Branding", category: "Hospitality", image: "/images/project-hotel.jpg" },
           ].map((project) => (
             <div key={project.title} className="group cursor-pointer">
-              <div className="aspect-[4/5] overflow-hidden rounded-lg bg-neutral-100">
-                <div className="flex h-full items-center justify-center text-neutral-400">
-                  {project.title}
-                </div>
+              <div className="relative aspect-[4/5] overflow-hidden rounded-lg bg-neutral-100">
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover object-center"
+                  />
+                ) : (
+                  <div className="flex h-full items-center justify-center text-neutral-400">
+                    {project.title}
+                  </div>
+                )}
               </div>
               <h3 className="mt-4 text-lg font-medium">{project.title}</h3>
               <p className="mt-1 text-sm text-neutral-500">

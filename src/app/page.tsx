@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,15 +10,14 @@ export default function Home() {
 
       {/* Hero Image Section — shorter so the heading below peeks into view */}
       <section className="relative h-[55vh] min-h-[400px] w-full overflow-hidden">
-        {/* Placeholder background — replace with your actual hero image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "linear-gradient(135deg, #1a3a6e 0%, #265eaa 40%, #1e2d4a 70%, #1a2744 100%)",
-          }}
+        <Image
+          src="/images/hero-mockup.jpg"
+          alt="Signagraph brand execution showcase"
+          fill
+          className="object-cover object-center"
+          priority
         />
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/40" />
       </section>
 
       {/* Hero Text Section */}
@@ -73,12 +73,14 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Right — Image placeholder */}
-            <div className="aspect-[4/3] overflow-hidden rounded-xl bg-neutral-300">
-              {/* Replace with your actual image */}
-              <div className="flex h-full w-full items-center justify-center text-neutral-500">
-                Brand installation image
-              </div>
+            {/* Right — Image */}
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-neutral-300">
+              <Image
+                src="/images/about-mockup.jpg"
+                alt="About Signagraph — brand installation"
+                fill
+                className="object-cover object-center"
+              />
             </div>
           </div>
 
@@ -104,10 +106,13 @@ export default function Home() {
             <div className="mt-14 grid gap-8 md:grid-cols-2">
               {/* Project 1 — Retail Branding */}
               <div className="group">
-                <div className="aspect-[4/3] overflow-hidden rounded-xl bg-neutral-200">
-                  <div className="flex h-full w-full items-center justify-center text-neutral-400">
-                    Retail branding image
-                  </div>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-neutral-200">
+                  <Image
+                    src="/images/home-retail printer.jpg"
+                    alt="Retail branding project"
+                    fill
+                    className="object-cover object-center"
+                  />
                 </div>
                 <h3 className="mt-5 text-sm font-bold uppercase tracking-[0.15em] text-foreground">
                   Retail Branding
@@ -119,10 +124,13 @@ export default function Home() {
 
               {/* Project 2 — Corporate Environment */}
               <div className="group">
-                <div className="aspect-[4/3] overflow-hidden rounded-xl bg-[#265eaa]">
-                  <div className="flex h-full w-full items-center justify-center text-neutral-400">
-                    Corporate environment image
-                  </div>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-[#265eaa]">
+                  <Image
+                    src="/images/home-carporate-mockup.jpg"
+                    alt="Corporate environment project"
+                    fill
+                    className="object-cover object-center"
+                  />
                 </div>
                 <h3 className="mt-5 text-sm font-bold uppercase tracking-[0.15em] text-foreground">
                   Corporate Environment

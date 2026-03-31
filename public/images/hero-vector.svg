@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+
+    <!-- Paper Shadow -->
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="30" dy="50" stdDeviation="20" flood-opacity="0.25" />
+    </filter>
+
+    <!-- Edge Highlight -->
+    <linearGradient id="edge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Blue Background -->
+  <rect width="1600" height="900" fill="url(#bg)" />
+
+  <!-- 3D Isometric View Container -->
+  <!-- We rotate and skew to give an oblique/isometric perspective common in Illustrator mockups -->
+  <g transform="translate(800, 450) scale(1.1) rotate(25) skewX(-20)">
+    
+    <!-- Base Layer (Back Paper) -->
+    <g filter="url(#shadow)">
+      <rect x="-400" y="-300" width="800" height="600" rx="8" fill="#1e40af" />
+      <!-- Top Edge -->
+      <rect x="-400" y="-300" width="800" height="2" fill="url(#edge)" />
+      <!-- Left Edge -->
+      <rect x="-400" y="-300" width="2" height="600" fill="url(#edge)" />
+    </g>
+
+    <!-- Middle Layer (Slightly lighter blue paper, offset up-left) -->
+    <g transform="translate(-50, -60)" filter="url(#shadow)">
+      <rect x="-350" y="-250" width="700" height="500" rx="8" fill="#3b82f6" />
+      <!-- Fine white edge for paper thickness -->
+      <rect x="-350" y="-250" width="700" height="2" fill="url(#edge)" />
+      <rect x="-350" y="-250" width="2" height="500" fill="url(#edge)" />
+    </g>
+
+    <!-- Top Layer (Light blue paper, offset more up-left) -->
+    <g transform="translate(-100, -120)" filter="url(#shadow)">
+      <rect x="-300" y="-200" width="600" height="400" rx="8" fill="#93c5fd" />
+      <!-- Minimalist geometric abstract element on top paper -->
+      <circle cx="0" cy="0" r="100" fill="#eff6ff" opacity="0.15" />
+      <rect x="-150" y="-100" width="100" height="200" rx="50" fill="#eff6ff" opacity="0.2" />
+      
+      <!-- Fine white edge for paper thickness -->
+      <rect x="-300" y="-200" width="600" height="2" fill="url(#edge)" />
+      <rect x="-300" y="-200" width="2" height="400" fill="url(#edge)" />
+    </g>
+
+    <!-- Extra abstract floating element -->
+    <g transform="translate(-300, 100)" filter="url(#shadow)">
+      <rect x="0" y="0" width="150" height="80" rx="4" fill="#60a5fa" />
+      <rect x="0" y="0" width="150" height="1" fill="url(#edge)" />
+      <rect x="0" y="0" width="1" height="80" fill="url(#edge)" />
+    </g>
+  </g>
+</svg>
