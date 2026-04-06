@@ -11,13 +11,12 @@ export default function Home() {
       {/* Hero Image Section — shorter so the heading below peeks into view */}
       <section className="relative h-[55vh] min-h-[400px] w-full overflow-hidden">
         <Image
-          src="/images/hero-mockup.jpg"
+          src="/images/hero-page.jpg"
           alt="Signagraph brand execution showcase"
           fill
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-black/40" />
       </section>
 
       {/* Hero Text Section */}
@@ -76,16 +75,13 @@ export default function Home() {
             {/* Right — Image */}
             <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-neutral-300">
               <Image
-                src="/images/about-mockup.jpg"
-                alt="About Signagraph — brand installation"
+                src="/images/about-brand.jpeg"
+                alt="About Signagraph — brand materials and collateral"
                 fill
                 className="object-cover object-center"
               />
             </div>
           </div>
-
-          {/* Divider */}
-          <div className="mt-24 h-px w-full bg-neutral-300" />
 
           {/* Selected Projects Section */}
           <div className="mt-24">
@@ -145,7 +141,7 @@ export default function Home() {
       </section>
 
       {/* What We Do — Services Section */}
-      <section className="mx-6 mb-6 rounded-3xl bg-[#dce6f3] lg:mx-12">
+      <section className="mx-6 mb-6 rounded-3xl bg-white lg:mx-12">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-12 lg:py-28">
           <div className="grid gap-16 lg:grid-cols-[1fr_3fr] lg:gap-20">
             {/* Left — Heading */}
@@ -201,7 +197,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="mx-6 rounded-3xl bg-[#f8d7d6] lg:mx-12">
+      <section className="mx-6 rounded-3xl bg-white lg:mx-12">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-12 lg:py-28">
           {/* Heading */}
           <div className="text-center">

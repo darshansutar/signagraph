@@ -6,37 +6,37 @@ const services = [
     title: "Brand Execution",
     description:
       "We help brands translate creative concepts into real-world installations. From retail environments to corporate spaces and promotional activations, we ensure seamless execution of branding projects.",
-    image: "/images/service-excution mockup.jpg",
+    image: "/images/service-brand-execution.jpeg",
   },
   {
     title: "Retail & Spatial Branding",
     description:
       "Complete branding solutions for retail stores, showrooms, and commercial environments including wall graphics, signage systems, display installations, and visual merchandising elements.",
-    image: "/images/service-retail.jpg",
+    image: "/images/service-spatial-retail.jpg",
   },
   {
     title: "Corporate Branding",
     description:
       "Office branding and environmental graphics that create strong brand presence within corporate spaces, including reception branding, wayfinding systems, and workspace graphics.",
-    image: "/images/service-corporate.jpg",
+    image: "/images/service-corporate-branding.jpg",
   },
   {
     title: "Exhibition & Event Branding",
     description:
       "Design and execution of exhibition stands, stage backdrops, display panels, and event branding installations that help brands stand out in high-visibility environments.",
-    image: "/images/service-exhibition.jpg",
+    image: "/images/service-event-branding.jpg",
   },
   {
     title: "Outdoor Branding & Signage",
     description:
       "Large-scale brand visibility solutions including building signage, illuminated signs, hoardings, and outdoor installations designed for durability and maximum impact.",
-    image: "/images/service-outdoor.jpg",
+    image: "/images/service-outdoor-branding.png",
   },
   {
     title: "Production & Fabrication",
     description:
       "Advanced production capabilities including large format printing, signage fabrication, and custom branding elements executed with high-quality materials and precision manufacturing.",
-    image: "/images/service-production.jpg",
+    image: "/images/service-production-new.jpg",
   },
 ];
 
