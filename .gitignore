@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# large files
+AdobeStock_1785784562.zip
+images/AdobeStock_1785784562/
+*.psdt
+"V3 LOGO.pdf"
