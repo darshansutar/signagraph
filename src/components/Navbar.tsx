@@ -7,8 +7,14 @@ import { useState } from "react";
 
 export default function Navbar() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleHomeClick = (e: React.MouseEvent) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
   const linkClass =
     "relative text-sm text-foreground/80 transition-colors hover:text-foreground after:absolute after:left-0 after:-bottom-1 after:h-[1.5px] after:w-0 after:bg-foreground after:transition-all after:duration-300 hover:after:w-full";
 
@@ -21,7 +27,7 @@ export default function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 lg:px-12 lg:py-5">
         {/* Logo */}
-        <Link href="/">
+        <Link href="/" onClick={handleHomeClick}>
           <Image
             src="/images/logo.png"
             alt="V3 SignaGraph"
@@ -34,11 +40,9 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden items-center gap-10 lg:flex">
-          {!isHome && (
-            <Link href="/" className={linkClass}>
-              Home
-            </Link>
-          )}
+          <Link href="/" className={linkClass} onClick={handleHomeClick}>
+            Home
+          </Link>
           <Link href="/about" className={linkClass}>
             About
           </Link>
@@ -74,15 +78,13 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {mobileOpen && (
         <div className="flex flex-col gap-4 bg-white px-6 pb-6 lg:hidden">
-          {!isHome && (
-            <Link
-              href="/"
-              className="text-sm text-foreground/80 hover:text-foreground"
-              onClick={() => setMobileOpen(false)}
-            >
-              Home
-            </Link>
-          )}
+          <Link
+            href="/"
+            className="text-sm text-foreground/80 hover:text-foreground"
+            onClick={(e) => { handleHomeClick(e); setMobileOpen(false); }}
+          >
+            Home
+          </Link>
           <Link
             href="/about"
             className="text-sm text-foreground/80 hover:text-foreground"
